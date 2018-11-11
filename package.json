@@ -6,6 +6,7 @@
   "dependencies": {
     "bloomer": "^0.6.5",
     "bulma": "^0.7.0",
+    "font-awesome": "^4.7.0",
     "gatsby": "^2.0.0",
     "gatsby-image": "^2.0.10",
     "gatsby-plugin-netlify": "^2.0.0",
@@ -18,10 +19,12 @@
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-remark": "^2.1.1",
     "gatsby-transformer-sharp": "^2.1.1",
+    "i": "^0.3.6",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.1.1",
     "node-sass": "^4.9.2",
+    "npm": "^6.4.1",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
@@ -44,6 +47,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.5.0",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2"
   }
