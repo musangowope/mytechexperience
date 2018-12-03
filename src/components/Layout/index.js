@@ -3,6 +3,8 @@ import Helmet from "react-helmet";
 import "font-awesome/css/font-awesome.min.css";
 
 import PrimaryNavbar from "../../components/PrimaryNavbar";
+import SecondaryNavbar from "../../components/SecondaryNavbar"
+
 import Header from '../../components/Header'
 
 import "../../css/styles.scss";
@@ -13,6 +15,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <PrimaryNavbar />
     <Header />
+    <SecondaryNavbar/>
     <div>{children}</div>
   </div>
 );
