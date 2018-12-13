@@ -20,35 +20,30 @@ const Header = props => {
           <img
             src={MusangoAvatarImg}
             className="background-container__card__avatar"
-            alt="ourtechexperience-image"
           />
         </Column>
         <Column isSize="1/5" className="background-container__card">
           <img
             src={MichaelAvatarImg}
             className="background-container__card__avatar"
-            alt="ourtechexperience-image"
           />
         </Column>
         <Column isSize="1/5" className="background-container__card">
           <img
             src={WarrenAvatarImg}
             className="background-container__card__avatar"
-            alt="ourtechexperience-image"
           />
         </Column>
         <Column isSize="1/5" className="background-container__card">
           <img
             src={DanielleAvatarImg}
             className="background-container__card__avatar"
-            alt="ourtechexperience-image"
           />
         </Column>
         <Column isSize="1/5" className="background-container__card">
           <img
             src={SchalkAvatarImg}
             className="background-container__card__avatar"
-            alt="ourtechexperience-image"
           />
         </Column>
       </Columns>

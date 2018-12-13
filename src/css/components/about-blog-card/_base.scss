@@ -1,0 +1,43 @@
+.about-blog-card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(28, 28, 28, 0.72);
+  }
+  &__header {
+    position: relative;
+    z-index: 99;
+    color: #1D3557;
+    font-weight: bold;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-shadow: none;
+  }
+
+  &__content {
+    @extend .card-content;
+    font-weight: 300;
+
+    &--overlay {
+      position: relative;
+      z-index: 999;
+      color: white;
+    }
+  }
+
+  .stay-in-touch {
+    &__twitter-link {
+      color: #80AAF9
+    }
+    &__email-link {
+      color: #E63946;
+    }
+  }
+}
