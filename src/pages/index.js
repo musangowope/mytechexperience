@@ -8,6 +8,7 @@ import { Columns, Column } from "bloomer";
 import { information } from "../constants/about-us-information";
 import { LookingWritersImg } from "../components/AboutBlogCard/images-constant";
 import LookingForContributors from "../components/AboutBlogCard/components/LookingForContributions";
+import Header from "../components/Header";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -16,6 +17,10 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+
+        <Header />
+        {/*<SecondaryNavbar/>*/}
+
         <section className="home-body-section">
           <Columns>
             <Column isSize="2/3">
