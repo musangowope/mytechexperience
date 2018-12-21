@@ -31,9 +31,11 @@ class PrimaryNavbar extends Component {
       <Navbar className="primary-navbar">
         <NavbarBrand>
           <NavbarItem>
-            <strong className="has-text-white is-uppercase">
-              Our Tech Experiences
-            </strong>
+            <Link to="/">
+              <strong className="has-text-white is-uppercase">
+                Our Tech Experiences
+              </strong>
+            </Link>
           </NavbarItem>
         </NavbarBrand>
 

@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import AboutBlogCard from "../components/AboutBlogCard";
+import BlogPostPreview from "../components/BlogPostPreview";
+import SecondaryNavbar from "../components/SecondaryNavbar";
 import StayInTouchContent from "../components/AboutBlogCard/components/StayInTouchContent";
 import { Columns, Column } from "bloomer";
 import { information } from "../constants/about-us-information";
@@ -14,43 +16,24 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    console.log(data.allMarkdownRemark);
 
     return (
       <Layout>
-
         <Header />
         {/*<SecondaryNavbar/>*/}
 
         <section className="home-body-section">
           <Columns>
             <Column isSize="2/3">
-              <div className="content">
-                <h1 className="has-text-weight-bold is-size-2 has-text-white">
-                  Latest Stories
-                </h1>
-              </div>
               {posts.map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: "1px solid #eaecee", padding: "2em 4em" }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
+                <BlogPostPreview
+                  blogImage={post.frontmatter.image.publicURL}
+                  link={post.fields.slug}
+                  title={post.frontmatter.title}
+                  date={post.frontmatter.date}
+                  excerpt={post.excerpt}
+                />
               ))}
             </Column>
             <Column isSize="1/3">
@@ -73,7 +56,6 @@ export default class IndexPage extends React.Component {
                 hasOverlayStyle={true}
                 renderContent={<LookingForContributors />}
               />
-
             </Column>
           </Columns>
         </section>
@@ -107,6 +89,10 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "MMMM DD, YYYY")
+            image {
+              id
+              publicURL
+            }
           }
         }
       }
