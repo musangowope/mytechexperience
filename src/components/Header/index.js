@@ -51,7 +51,7 @@ const Header = props => {
       <div className="header__overlay">
         <div className="header__overlay__content">
           <h1 className="has-text-weight-bold is-size-2 has-text-white has-text-centered is-uppercase">
-            Explore our stories in the <br /> tech industry..
+            Front End Developers in Cape Town <br /> sharing their stories and experiences
           </h1>
         </div>
       </div>
