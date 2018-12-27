@@ -1,60 +1,84 @@
 .header {
-  height: 50vh;
-  //background-color: black;
+  margin-top: 52px;
+  //height: 50vh;
+  background-color: white;
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   //background-attachment: fixed;
 
-  &__overlay {
-    margin-top: 52px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: calc(100% - 52px);
-    width: 100%;
-    background: rgba(39, 30, 30, 0.60);
-    z-index: 0;
+  &__first-side {
 
-
-    &__content {
+    .fs-skills-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
+      flex-flow: row;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      &__skills {
+        border-radius: 20px;
+        color: white;
+        flex-basis: 33.33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        &:first-child {
+          background-color: #E63946;
+        }
 
-  }
+        &:nth-child(2) {
+          background-color: #1D3557;
+        }
 
-  .background-container {
-    height: 100%;
-    position: relative;
-    &__card {
-      @extend .background-container;
-      &__avatar {
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        &:last-child {
+          background-color: #0f81cc;
+        }
       }
     }
-    &__card:first-child {
-      background-color: #e63946;
+
+
+
+    .working-img-container {
+      width: 100%;
+      &__img {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
-    &__card:nth-child(2) {
+
+    @keyframes hover {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+  }
+
+  &__about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+
+    &__button {
+      margin-top: 1em;
       background-color: #1d3557;
-    }
-    &__card:nth-child(3) {
-      background-color: #a8dadc;
-    }
-    &__card:nth-child(4) {
-      background-color: #f1faee;
-    }
-    &__card:nth-child(5) {
-      background-color: #457b9d;
+      @extend .is-uppercase;
+      color: white;
+      border-radius: 0px;
+      font-weight: bold;
+      width: 100%;
+      &:hover {
+        color:white;
+      }
     }
   }
 }

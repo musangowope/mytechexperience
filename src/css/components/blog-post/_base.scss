@@ -1,0 +1,7 @@
+.blog-post {
+  @extend .section;
+  &__content {
+    @extend .container;
+    @extend .content;
+  }
+}

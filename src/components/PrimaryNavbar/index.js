@@ -31,9 +31,9 @@ class PrimaryNavbar extends Component {
       <Navbar className="primary-navbar">
         <NavbarBrand>
           <NavbarItem>
-            <Link to="/">
-              <strong className="has-text-white is-uppercase">
-                CTFed Experiences
+            <Link to="/" className="primary-navbar__logo">
+              <strong>
+                What I learnt today
               </strong>
             </Link>
           </NavbarItem>
@@ -46,17 +46,24 @@ class PrimaryNavbar extends Component {
             this.onClickNav();
           }}
         >
-          <NavbarEnd>
+          <NavbarEnd className="is-uppercase">
             <NavbarItem>
-              <Control hasIcons="left" className="primary-navbar__searchbar">
-                <Input
-                  isSize="small"
-                  placeholder="Search blog"
-                  className="primary-navbar__searchbar__input"
-                />
-                <Icon isSize="small" isAlign="left" className="fa fa-search" />
-              </Control>
+              Subscribe
             </NavbarItem>
+            <NavbarItem>
+              Twitter
+            </NavbarItem>
+
+            {/*<NavbarItem>*/}
+              {/*<Control hasIcons="left" className="primary-navbar__searchbar">*/}
+                {/*<Input*/}
+                  {/*isSize="small"*/}
+                  {/*placeholder="Search blog"*/}
+                  {/*className="primary-navbar__searchbar__input"*/}
+                {/*/>*/}
+                {/*<Icon isSize="small" isAlign="left" className="fa fa-search" />*/}
+              {/*</Control>*/}
+            {/*</NavbarItem>*/}
           </NavbarEnd>
         </NavbarMenu>
       </Navbar>

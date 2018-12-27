@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  margin-bottom: 20px;
   &__overlay {
     position: absolute;
     top: 0;
@@ -13,7 +14,7 @@
   &__header {
     position: relative;
     z-index: 99;
-    color: #1D3557;
+    color: #1d3557;
     font-weight: bold;
     padding-top: 1.5rem;
     padding-left: 1.5rem;
@@ -34,10 +35,10 @@
 
   .stay-in-touch {
     &__twitter-link {
-      color: #80AAF9
+      color: #80aaf9;
     }
     &__email-link {
-      color: #E63946;
+      color: #e63946;
     }
   }
 }

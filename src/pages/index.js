@@ -6,28 +6,26 @@ import AboutBlogCard from "../components/AboutBlogCard";
 import BlogPostPreview from "../components/BlogPostPreview";
 import SecondaryNavbar from "../components/SecondaryNavbar";
 import StayInTouchContent from "../components/AboutBlogCard/components/StayInTouchContent";
+import AboutContent from "../components/AboutBlogCard/components/AboutContent";
 import { Columns, Column } from "bloomer";
 import { information } from "../constants/about-us-information";
 import { LookingWritersImg } from "../components/AboutBlogCard/images-constant";
 import LookingForContributors from "../components/AboutBlogCard/components/LookingForContributions";
-import Header from "../components/Header";
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    console.log(data.allMarkdownRemark);
 
     return (
       <Layout>
-        <Header />
-        {/*<SecondaryNavbar/>*/}
 
         <section className="home-body-section">
           <Columns>
             <Column isSize="2/3">
-              {posts.map(({ node: post }) => (
+              {posts.map(({ node: post }, key) => (
                 <BlogPostPreview
+                  key={key}
                   blogImage={post.frontmatter.image.publicURL}
                   link={post.fields.slug}
                   title={post.frontmatter.title}
@@ -38,17 +36,14 @@ export default class IndexPage extends React.Component {
             </Column>
             <Column isSize="1/3">
               <AboutBlogCard
-                title="About CTFed Experience Blog"
-                renderContent={information.aboutUs}
+                title="About what I learn't today"
+                renderContent={<AboutContent />}
               />
-              <br />
 
               <AboutBlogCard
                 title="Stay in touch"
                 renderContent={<StayInTouchContent />}
               />
-
-              <br />
 
               <AboutBlogCard
                 title="Looking for other contributors"
