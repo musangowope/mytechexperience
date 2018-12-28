@@ -35,10 +35,14 @@
 
   .stay-in-touch {
     &__twitter-link {
-      color: #80aaf9;
+      a {
+        color: #80aaf9;
+      }
     }
     &__email-link {
-      color: #e63946;
+      a {
+        color: #e63946;
+      }
     }
   }
 }

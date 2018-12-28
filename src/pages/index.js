@@ -1,16 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import AboutBlogCard from "../components/AboutBlogCard";
 import BlogPostPreview from "../components/BlogPostPreview";
-import SecondaryNavbar from "../components/SecondaryNavbar";
 import StayInTouchContent from "../components/AboutBlogCard/components/StayInTouchContent";
 import AboutContent from "../components/AboutBlogCard/components/AboutContent";
 import { Columns, Column } from "bloomer";
-import { information } from "../constants/about-us-information";
-import { LookingWritersImg } from "../components/AboutBlogCard/images-constant";
-import LookingForContributors from "../components/AboutBlogCard/components/LookingForContributions";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -19,8 +15,20 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-
         <section className="home-body-section">
+          <div className="is-hidden-tablet is-hidden-desktop is-hidden-widescreen">
+
+            <AboutBlogCard
+              title="About what I learn't today"
+              renderContent={<AboutContent />}
+            />
+
+            <AboutBlogCard
+              title="Stay in touch"
+              renderContent={<StayInTouchContent />}
+            />
+          </div>
+
           <Columns>
             <Column isSize="2/3">
               {posts.map(({ node: post }, key) => (
@@ -35,22 +43,17 @@ export default class IndexPage extends React.Component {
               ))}
             </Column>
             <Column isSize="1/3">
-              <AboutBlogCard
-                title="About what I learn't today"
-                renderContent={<AboutContent />}
-              />
+              <div className="is-hidden-mobile">
+                <AboutBlogCard
+                  title="About what I learn't today"
+                  renderContent={<AboutContent />}
+                />
 
-              <AboutBlogCard
-                title="Stay in touch"
-                renderContent={<StayInTouchContent />}
-              />
-
-              <AboutBlogCard
-                title="Looking for other contributors"
-                backgroundPicture={LookingWritersImg}
-                hasOverlayStyle={true}
-                renderContent={<LookingForContributors />}
-              />
+                <AboutBlogCard
+                  title="Stay in touch"
+                  renderContent={<StayInTouchContent />}
+                />
+              </div>
             </Column>
           </Columns>
         </section>

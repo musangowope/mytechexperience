@@ -8,7 +8,13 @@ import "../../css/styles.scss";
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+    <Helmet title="What I learn't today">
+      <meta name="robots" content="noindex, nofollow" />
+      <meta
+        name="description"
+        content="A blog about Musango Wope learning to code"
+      />
+    </Helmet>
     <PrimaryNavbar />
     <div>{children}</div>
   </div>

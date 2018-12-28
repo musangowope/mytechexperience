@@ -7,28 +7,11 @@
   width: 100%;
   color: #25344F;
 
-  &__logo {
+  &__link {
     @extend .is-uppercase;
     color: #25344F;
     &:hover {
       color: #25344F;
-    }
-  }
-
-  &__searchbar{
-    &__input {
-      background-color: #102038;
-      border-color: #102038;
-      color: #102038;
-    }
-
-    &__input::placeholder {
-      color: white;
-      text-transform: uppercase;
-    }
-
-    &__input:hover {
-      border-color: #102038;
     }
   }
 }

@@ -5,7 +5,7 @@ import { MooseWorkingImg } from "../../images-constant";
 
 const AboutContent = () => (
   <Columns>
-    <Column isSize="1/3">
+    <Column isSize="1/3" className="has-text-centered-mobile">
       <img src={MooseWorkingImg} />
     </Column>
     <Column isSize="3/3">

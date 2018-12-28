@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import github from "../../img/github-icon.svg";
-import logo from "../../img/logo.svg";
 import {
   Navbar,
   NavbarMenu,
   NavbarBrand,
   NavbarItem,
-  Icon,
   NavbarEnd,
-  Control,
-  Input
+  NavbarBurger
 } from "bloomer";
 
 class PrimaryNavbar extends Component {
@@ -31,12 +27,14 @@ class PrimaryNavbar extends Component {
       <Navbar className="primary-navbar">
         <NavbarBrand>
           <NavbarItem>
-            <Link to="/" className="primary-navbar__logo">
-              <strong>
-                What I learnt today
-              </strong>
+            <Link to="/" className="primary-navbar__link">
+              <strong>What I learnt today</strong>
             </Link>
           </NavbarItem>
+          <NavbarBurger
+            isActive={this.state.isActive}
+            onClick={this.onClickNav}
+          />
         </NavbarBrand>
 
         <NavbarMenu
@@ -48,22 +46,18 @@ class PrimaryNavbar extends Component {
         >
           <NavbarEnd className="is-uppercase">
             <NavbarItem>
-              Subscribe
+              <a href="https://twitter.com/CodeUiux" target="_blank" className="primary-navbar__link">
+                Contact Me
+              </a>
             </NavbarItem>
             <NavbarItem>
-              Twitter
+              <a
+                href="mailto:musangow@gmail.com?Subject=Hello%20again" className="primary-navbar__link"
+                target="_top"
+              >
+                Twitter
+              </a>
             </NavbarItem>
-
-            {/*<NavbarItem>*/}
-              {/*<Control hasIcons="left" className="primary-navbar__searchbar">*/}
-                {/*<Input*/}
-                  {/*isSize="small"*/}
-                  {/*placeholder="Search blog"*/}
-                  {/*className="primary-navbar__searchbar__input"*/}
-                {/*/>*/}
-                {/*<Icon isSize="small" isAlign="left" className="fa fa-search" />*/}
-              {/*</Control>*/}
-            {/*</NavbarItem>*/}
           </NavbarEnd>
         </NavbarMenu>
       </Navbar>
