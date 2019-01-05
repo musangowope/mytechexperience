@@ -30,7 +30,7 @@ class PrimaryNavbar extends Component {
           <NavbarItem>
             <Link to="/" className="primary-navbar__link">
               <div className="primary-navbar__link__image">
-                <img src={MooseWorkingImg} />
+                <img src={MooseWorkingImg} alt="wilt-logo"/>
               </div>
               <div className="primary-navbar__link__text">
                 <strong>What I learnt today</strong>
@@ -43,7 +43,7 @@ class PrimaryNavbar extends Component {
           />
         </NavbarBrand>
 
-        <NavbarMenu>
+        <NavbarMenu isActive={this.state.isActive} onClick={this.onClickNav}>
           <NavbarEnd className="is-uppercase">
             <NavbarItem>
               <a
