@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
+import { MooseWorkingImg } from "../AboutBlogCard/images-constant.js";
 import {
   Navbar,
   NavbarMenu,
@@ -28,7 +29,12 @@ class PrimaryNavbar extends Component {
         <NavbarBrand>
           <NavbarItem>
             <Link to="/" className="primary-navbar__link">
-              <strong>What I learnt today</strong>
+              <div className="primary-navbar__link__image">
+                <img src={MooseWorkingImg} />
+              </div>
+              <div className="primary-navbar__link__text">
+                <strong>What I learnt today</strong>
+              </div>
             </Link>
           </NavbarItem>
           <NavbarBurger
@@ -37,25 +43,24 @@ class PrimaryNavbar extends Component {
           />
         </NavbarBrand>
 
-        <NavbarMenu
-          isActive={this.state.isActive}
-          onClick={e => {
-            e.preventDefault();
-            this.onClickNav();
-          }}
-        >
+        <NavbarMenu>
           <NavbarEnd className="is-uppercase">
             <NavbarItem>
-              <a href="https://twitter.com/CodeUiux" target="_blank" className="primary-navbar__link">
-                Contact Me
+              <a
+                href="https://twitter.com/CodeUiux"
+                className="primary-navbar__link"
+                rel="noopener"
+              >
+                Twitter
               </a>
             </NavbarItem>
             <NavbarItem>
               <a
-                href="mailto:musangow@gmail.com?Subject=Hello%20again" className="primary-navbar__link"
+                href="mailto:musangow@gmail.com?Subject=Hello%20again"
+                className="primary-navbar__link"
                 target="_top"
               >
-                Twitter
+                Contact Me
               </a>
             </NavbarItem>
           </NavbarEnd>

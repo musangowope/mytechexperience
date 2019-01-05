@@ -6,7 +6,7 @@ import { MooseWorkingImg } from "../../images-constant";
 const AboutContent = () => (
   <Columns>
     <Column isSize="1/3" className="has-text-centered-mobile">
-      <img src={MooseWorkingImg} />
+      <img src={MooseWorkingImg} alt="what-learnt today"/>
     </Column>
     <Column isSize="3/3">
       "Hi, my name is Musango Wope. What I learn't today is a blog that explains
@@ -18,7 +18,6 @@ const AboutContent = () => (
   </Columns>
 );
 
-AboutContent.propTypes = {};
 AboutContent.defaultProps = {};
 
 export default AboutContent;

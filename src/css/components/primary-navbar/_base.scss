@@ -10,8 +10,24 @@
   &__link {
     @extend .is-uppercase;
     color: #25344F;
+    align-items: center;
+    display: flex;
     &:hover {
       color: #25344F;
+    }
+
+    &__image {
+      background-color: #A8DADC;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 0.5em;
+      display: flex;
+
+      img {
+        max-width: 23px;
+        margin: auto;
+      }
     }
   }
 }

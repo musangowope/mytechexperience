@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import { Card, CardHeader, CardContent } from "bloomer";
-import PropTypes from "prop-types";
 
 const AboutBlogCard = ({
   title,
@@ -35,8 +34,5 @@ const AboutBlogCard = ({
     </Fragment>
   );
 };
-
-AboutBlogCard.propTypes = {};
-AboutBlogCard.defaultProps = {};
 
 export default AboutBlogCard;
